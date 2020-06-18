@@ -1,3 +1,6 @@
+import {soma} from "./calculoconvidados";
+
+
 class ListaConvidados {
     constructor () {
         this.convidados = [];
@@ -6,6 +9,11 @@ class ListaConvidados {
     adicionar(nome, idade, cpf) {
         this.convidados.push({nome: nome, idade: idade, cpf: cpf});
         console.log(this.convidados);
+    }
+
+    totalConvidados (){
+        const res = soma (1,2);
+        console.log(res);
     }
 
     listarConvidados() {
@@ -23,5 +31,10 @@ document.getElementById("adicionar").onclick = function(){
 
 document.getElementById("listar").onclick = function(){
     listaConv.listarConvidados();
+    
+};
+
+document.getElementById("total").onclick = function(){
+    listaConv.totalConvidados();
     
 };
